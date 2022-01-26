@@ -11,6 +11,9 @@ spring:
       ddl-auto: create
       format_sql: true #To beautify or pretty print the SQL
       show_sql: true #show sql
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
 
 logging:
   level:
