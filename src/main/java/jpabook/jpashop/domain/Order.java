@@ -4,6 +4,7 @@ import lombok.AccessLevel;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.hibernate.annotations.BatchSize;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
@@ -31,6 +32,7 @@ public class Order {
 
     // JPQL select o from order o -> SQL select * from order = 100 + 1(order)
 
+    @BatchSize(size = 100)
     //XToMany의 기본 FetchType = LAZY
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();

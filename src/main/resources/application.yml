@@ -11,6 +11,9 @@ spring:
       ddl-auto: create
       format_sql: true #To beautify or pretty print the SQL
       show_sql: true #show sql
+    properties:
+      hibernate:
+      default_batch_fetch_size: 100
   thymeleaf:
     prefix: classpath:/templates/
     suffix: .html
