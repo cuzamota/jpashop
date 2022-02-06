@@ -19,7 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import java.time.LocalDateTime;
 import java.util.List;
 
-
 import static java.util.stream.Collectors.*;
 
 /**
@@ -164,6 +163,7 @@ public class OrderApiController {
         for (Order order : all) {
             order.getMember().getName(); //Lazy 강제 초기화
             order.getDelivery().getAddress(); //Lazy 강제 초기환
+
             List<OrderItem> orderItems = order.getOrderItems();
             orderItems.stream().forEach(o -> o.getItem().getName()); //Lazy 강제초기화
         }
