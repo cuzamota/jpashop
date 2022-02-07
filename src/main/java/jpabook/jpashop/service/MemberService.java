@@ -1,7 +1,7 @@
 package jpabook.jpashop.service;
 
 import jpabook.jpashop.domain.Member;
-import jpabook.jpashop.repository.MemberRepository;
+import jpabook.jpashop.repository.MemberRepositoryOld;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -14,17 +14,17 @@ import java.util.List;
 @RequiredArgsConstructor // final만 생성자 함수를 만든다.
 public class MemberService {
 
-    private final MemberRepository memberRepository;
+    private final MemberRepositoryOld memberRepository;
 
     //생성자 injection
 //    @Autowired
-//    public MemberService(MemberRepository memberRepository) {
+//    public MemberService(MemberRepositoryOld memberRepository) {
 //        this.memberRepository = memberRepository;
 //    }
 
     //setter injection
 //    @Autowired
-//    public void setMemberRepository(MemberRepository memberRepository) {
+//    public void setMemberRepository(MemberRepositoryOld memberRepository) {
 //        this.memberRepository = memberRepository;
 //    }
 
